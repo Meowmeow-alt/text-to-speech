@@ -1,2 +1,2 @@
 streamlit
-gtts==2.2.3
+pip install gTTS
