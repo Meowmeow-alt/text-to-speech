@@ -1,5 +1,5 @@
 import streamlit as st
-from gtts import gTTS
+import gtts
 
 #___________SIDE BAR____________
 
@@ -10,6 +10,11 @@ st.sidebar.info(
     'Made by Tran Bao Tien\n\n'
     'For more information, contact me through my email: baotiendancer@gmail.com'
     )
+
+def css(file):
+     with open(file) as f:
+          st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+css("style/style.css")
 
 #___________MAIN CONTENT____________
 
@@ -41,7 +46,7 @@ lang_choice = {'Afrikaans':'af','Albanian':'sq','Arabic':'ar','Armenian':'hy','B
 'English (United Kingdom)':'en-uk','English (United States)':'en-us','Esperanto':'eo',
 'Finnish':'fi','French':'fr','German':'de','Greek':'el','Hindi':'hi','Hungarian':'hu',
 'Icelandic':'is','Indonesian':'id','Italian':'it','Japanese':'ja','Korean':'ko','Spanish':'es',
-'Spanish (Spain)':'es-es','Spanish (United States)':'es-us','Vietnamese':'vi'}
+'Spanish (Spain)':'es-es','Spanish (United States)':'es-us','Vietnamese':'vi','Thai': 'th'}
 
 def language_():
      choice = st.selectbox('Choose a language:', lang_choice.keys())

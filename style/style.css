@@ -1,0 +1,24 @@
+:root {
+     --salmon: #753838;
+     --skyblue: #45486a;
+}
+
+/* nav bar */
+.css-1avcm0n {
+     background: var(--salmon),0.8;
+}
+
+/* main */
+.css-uf99v8 {
+     background: linear-gradient(var(--salmon), var(--skyblue));
+}
+
+.css-uf99v8 {
+     background: linear-gradient(var(--salmon), var(--skyblue));
+}
+
+.css-1hynsf2 .stHeadingContainer {
+     padding-bottom: 15px;
+     text-align: center;
+     border: 1px solid white;
+}
