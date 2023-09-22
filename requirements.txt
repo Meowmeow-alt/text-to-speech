@@ -1,2 +1,2 @@
 streamlit
-pip install gTTS
+gTTS
