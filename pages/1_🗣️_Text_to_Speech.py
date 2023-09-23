@@ -1,5 +1,5 @@
 import streamlit as st
-from gtts import gTTS
+import gtts
 
 #___________SIDE BAR____________
 
