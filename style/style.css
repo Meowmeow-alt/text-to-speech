@@ -13,7 +13,7 @@
      background: linear-gradient(var(--salmon), var(--skyblue));
 }
 
-.stHeadingContainer {
+.main .stHeadingContainer {
      padding-bottom: 15px;
      text-align: center;
      border: 1px solid white;
