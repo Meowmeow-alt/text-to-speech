@@ -13,11 +13,7 @@
      background: linear-gradient(var(--salmon), var(--skyblue));
 }
 
-.css-uf99v8 {
-     background: linear-gradient(var(--salmon), var(--skyblue));
-}
-
-.css-1hynsf2 .stHeadingContainer {
+.stHeadingContainer {
      padding-bottom: 15px;
      text-align: center;
      border: 1px solid white;
