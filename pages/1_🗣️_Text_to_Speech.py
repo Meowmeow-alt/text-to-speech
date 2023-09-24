@@ -39,14 +39,15 @@ def text_():
      return text
 
 # language
-lang_choice = {'Afrikaans':'af','Albanian':'sq','Arabic':'ar','Armenian':'hy','Bengali':'bn',
-'Bosnian':'bs','Catalan':'ca','Chinese':'zh','Chinese (Mandarin/China)':'zh-cn',
-'Chinese (Mandarin/Taiwan)':'zh-tw','Chinese (Cantonese)':'zh-yue','Croatian':'hr','Czech':'cs',
-'Danish':'da','Dutch':'nl','English':'en','English (Australia)':'en-au',
-'English (United Kingdom)':'en-uk','English (United States)':'en-us','Esperanto':'eo',
-'Finnish':'fi','French':'fr','German':'de','Greek':'el','Hindi':'hi','Hungarian':'hu',
-'Icelandic':'is','Indonesian':'id','Italian':'it','Japanese':'ja','Korean':'ko','Spanish':'es',
-'Spanish (Spain)':'es-es','Spanish (United States)':'es-us','Vietnamese':'vi','Thai': 'th'}
+lang_choice = {'Afrikaans':'af','Arabic':'ar','Bengali':'bn','Bosnian':'bs','Catalan':'ca','Czech':'cs',
+    'Welsh':'cy','Danish':'da','German':'de','Greek':'el','English':'en','Esperanto':'eo','Spanish':'es',
+    'Estonian':'et','Finnish':'fi','French':'fr','Gujarati':'gu','Hindi':'hi','Croatian':'hr','Hungarian':'hu',
+    'Armenian':'hy','Indonesian':'id','Icelandic':'is','Italian':'it','Japanese':'ja','Javanese':'jw','Khmer':'km',
+    'Kannada':'kn','Korean':'ko','Latin':'la','Latvian':'lv','Macedonian':'mk','Malayalam':'ml','Marathi':'mr',
+    'Myanmar (Burmese)':'my','Nepali':'ne','Dutch':'nl','Norwegian':'no','Polish':'pl','Portuguese':'pt',
+    'Romanian':'ro','Russian':'ru','Sinhala':'si','Slovak':'sk','Albanian':'sq','Serbian':'sr','Sundanese':'su',
+    'Swedish':'sv','Swahili':'sw','Tamil':'ta','Telugu':'te','Thai':'th','Filipino':'tl','Turkish':'tr',
+    'Ukrainian':'uk','Urdu':'ur','Vietnamese':'vi','Chinese':'zh-CN'}
 
 def language_():
      choice = st.selectbox('Choose a language:', lang_choice.keys())
