@@ -3,7 +3,6 @@ import gtts
 from textblob import TextBlob
 from googletrans import Translator
 
-gen = DocumentGenerator(word_generator=MarkovWordGenerator())
 translator = Translator()
 
 #___________SIDE BAR____________
