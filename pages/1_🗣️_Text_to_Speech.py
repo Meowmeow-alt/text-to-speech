@@ -52,7 +52,6 @@ def main():
         except:
             pass
 
-
 # language
 def language(l):
     lang_choices = {'Afrikaans':'af','Arabic':'ar','Bengali':'bn','Bosnian':'bs','Catalan':'ca','Czech':'cs',
@@ -82,7 +81,7 @@ def ask_speed():
 def convert(text,lang,speed):
     result = gtts.gTTS(text=text, lang=lang, slow=speed)
     result.save('audio.mp3')
-    IPython.display.Audio("audio.mp3")
+    st.audio("audio.mp3")
 
 def sentiment_detection(text):
     class_output = translator.translate(text, dest='en')
