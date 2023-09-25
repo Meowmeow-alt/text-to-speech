@@ -26,22 +26,17 @@ st.write('###')
 def main():
     while True:
         try:
-            col1, col2 = st.columns([1, 1])
+            text = st.text_area("Text for translation:")
+            dest = language()
+            st.write('###')
 
-            with col1:
-                st.write("Texts for translation:")
-                text = st.text_area()
-                dest = language()
-
-            with col2:
-                st.write("Translated result:")
-                output = trans(text,dest)
-                st.write(output)
-            break
-        except EOFError:
+            st.write("Translated result:")
+            output = trans(text,dest)
+            st.write(output)
             break
         except:
-            pass
+            st.warning("Error, please try again")
+            break
 
 def language():
     lang_choices = {'Afrikaans':'af','Arabic':'ar','Bengali':'bn','Bosnian':'bs','Catalan':'ca','Czech':'cs',
