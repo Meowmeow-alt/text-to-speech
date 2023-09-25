@@ -15,7 +15,7 @@
 
 
 #### INTRODUCTION:
-- With the text you provided, we can create a speech and analyze the sentiment of it. How amazing?!
+- With the text you provided, we can create a speech and analyze the sentiment of it. How amazing?! ✨
 
 Text-to-speech (TTS) is a technology that can convert written text into spoken audio. Sentiment analysis is a technique that can detect the emotions and opinions expressed in text. Both of these applications have many potential benefits and challenges for various domains and users. In this project, I want to make a program that can combine TTS and sentiment analysis to create a more engaging and interactive experience.
 
@@ -28,7 +28,7 @@ The ask_speed function takes the user's answer from a radio widget and returns a
 
 #### TO-DO:
 - Change text sentiment analysis into emotion detection.
-I think it is going to be more awesome if we can see how the text express in each category of emotions, not only knowing it's positive or negative or neutral.
+It is going to be more awesome if we can see how the text express in each category of emotions, not only knowing it's positive or negative or neutral.
 
 #### LIBRARIES INCLUDE:
 I use many libraries to achieve my goal in this project, they are:
