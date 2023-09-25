@@ -1,5 +1,4 @@
 streamlit
 gTTS
 googletrans==3.1.0a0
-essential_generators
 textblob
