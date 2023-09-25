@@ -1,7 +1,6 @@
 import streamlit as st
 import gtts
 from essential_generators import DocumentGenerator,MarkovWordGenerator
-import IPython
 from textblob import TextBlob
 from googletrans import Translator
 
