@@ -44,8 +44,6 @@ def main():
             break
         except EOFError:
             break
-        except:
-            pass
 
 # language
 def language(l):
