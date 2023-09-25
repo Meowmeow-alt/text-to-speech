@@ -1,13 +1,11 @@
 import streamlit as st
-import gtts
-from textblob import TextBlob
 from googletrans import Translator
 
 translator = Translator()
 
 #___________SIDE BAR____________
 
-st.sidebar.success("This is the first page.")
+st.sidebar.success("This is the second page.")
 st.sidebar.image('Images/sidebar.png', output_format='png')
 st.sidebar.header('📸 Caution')
 st.sidebar.info(
@@ -22,32 +20,29 @@ css("style/style.css")
 
 #___________MAIN CONTENT____________
 
-st.title('CONVERT TEXT TO SPEECH')
+st.title('TRANSLATE')
 st.write('###')
 
 def main():
     while True:
         try:
-            text = st.text_input("Your text to convert: ")
-            st.write('###')
+            col1, col2 = st.columns([1, 1])
 
-            lang = language()
-            st.write('###')
+            with col1:
+                st.write("Texts for translation:")
+                text = st.text_area()
+                dest = language()
 
-            speed = ask_speed()
-            st.write('###')
-
-            convert(text,lang,speed)
-            st.write('###')
-
-            sentiment_detection(text)
+            with col2:
+                st.write("Translated result:")
+                output = trans(text,dest)
+                st.write(output)
             break
         except EOFError:
             break
         except:
             pass
 
-# language
 def language():
     lang_choices = {'Afrikaans':'af','Arabic':'ar','Bengali':'bn','Bosnian':'bs','Catalan':'ca','Czech':'cs',
     'Welsh':'cy','Danish':'da','German':'de','Greek':'el','English':'en','Esperanto':'eo','Spanish':'es',
@@ -59,35 +54,13 @@ def language():
     'Swedish':'sv','Swahili':'sw','Tamil':'ta','Telugu':'te','Thai':'th','Filipino':'tl','Turkish':'tr',
     'Ukrainian':'uk','Urdu':'ur','Vietnamese':'vi','Chinese':'zh-CN'}
 
-    choice = st.selectbox('Choose a language:', lang_choices.keys())
+    choice = st.selectbox('Choose a language to translate into:', lang_choices.keys())
     language = lang_choices[choice]
     return language
 
-# speed
-def ask_speed():
-    speed = st.radio(
-        "Do you want to hear the speech slowly?",
-        [":rainbow[YES PLEASE]", "NO THANKS"])
-    if speed == ':rainbow[YES PLEASE]':
-        return True
-    return False
-
-# Converting
-def convert(text,lang,speed):
-    result = gtts.gTTS(text=text, lang=lang, slow=speed)
-    result.save('audio.mp3')
-    st.audio("audio.mp3")
-
-def sentiment_detection(text):
-    class_output = translator.translate(text, dest='en')
+def trans(text,dest):
+    class_output = translator.translate(text, dest=dest)
     text = getattr(class_output, 'text')
-
-    analyze = TextBlob(text)
-    rate = analyze.sentiment.polarity
-    if rate == 0:
-        return st.info('Sentiment analysis: Your text is neutral')
-    elif rate > 0:
-        return st.success('Sentiment analysis: Your text is positive')
-    return st.warning('Sentiment analysis: Your text is negative')
+    return text
 
 main()
