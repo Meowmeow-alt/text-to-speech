@@ -18,6 +18,11 @@ def css(file):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 css("style/style.css")
 
+def css(file):
+    with open(file) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+css("style/translate.css")
+
 #___________MAIN CONTENT____________
 
 st.title('TRANSLATE')
