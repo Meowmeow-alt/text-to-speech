@@ -31,8 +31,9 @@ def main():
             st.write('###')
 
             st.write("Translated result:")
-            output = trans(text,dest)
-            st.write(output)
+            with st.empty():
+                output = trans(text,dest)
+                st.write(output)
             break
         except:
             st.warning("Error, please try again")
