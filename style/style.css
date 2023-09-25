@@ -24,8 +24,8 @@
      text-align: center;
 }
 
-/* .block-container .stMarkdown .e1f1d6gn2 {
+.e1f1d6gn2:last-child {
      padding: 10px;
      background-color: #262730;
      border-radius: 20px;
-} */
+}
