@@ -1,6 +1,5 @@
 import streamlit as st
 import gtts
-from essential_generators import DocumentGenerator,MarkovWordGenerator
 from textblob import TextBlob
 from googletrans import Translator
 
@@ -31,8 +30,6 @@ def main():
     while True:
         try:
             text = st.text_input("Your text to convert: ")
-            if not text:
-                text = gen.sentence()
             st.write('###')
 
             lang = language()
